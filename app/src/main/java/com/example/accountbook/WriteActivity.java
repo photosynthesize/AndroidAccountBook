@@ -1,7 +1,6 @@
 package com.example.accountbook;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -15,6 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.accountbook.db.DBHelper;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -90,9 +91,12 @@ public class WriteActivity extends AppCompatActivity {
 
         private void save(String type, String tag, String amount, String detail, String date) {
             String sql = String.format("INSERT INTO account(amount, date, detail, tag, type) values(%s, '%s', '%s', '%s', %s);", amount, date, detail, tag, type);
-            int mode = Context.MODE_APPEND;
-            SQLiteDatabase db = WriteActivity.this.openOrCreateDatabase(getString(R.string.db_name), mode, null);
+            /*int mode = Context.MODE_APPEND;
+            SQLiteDatabase db = WriteActivity.this.openOrCreateDatabase(getString(R.string.db_name), mode, null);*/
+            DBHelper dbHelper = new DBHelper(WriteActivity.this);
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
             db.execSQL(sql);
+            db.close();
         }
 
     }

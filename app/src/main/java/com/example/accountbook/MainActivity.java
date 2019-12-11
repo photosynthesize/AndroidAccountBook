@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button write;
     private Button list;
     private Button stat;
+    private Button health;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +23,12 @@ public class MainActivity extends AppCompatActivity {
         write = (Button) findViewById(R.id.but_main_write);
         list = (Button) findViewById(R.id.but_main_list);
         stat = (Button) findViewById(R.id.but_main_stat);
+        health = (Button) findViewById(R.id.but_main_health);
 
         write.setOnClickListener(new WriteListener());
         list.setOnClickListener(new ListListener());
         stat.setOnClickListener(new StatListener());
+        health.setOnClickListener(new HealthListener());
 
         createDB();
     }
@@ -67,6 +71,14 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             Intent intentToWrite = new Intent(MainActivity.this, ListActivity.class);
             startActivity(intentToWrite);
+        }
+    }
+
+    class HealthListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(MainActivity.this, "此功能尚未实现", Toast.LENGTH_SHORT).show();
         }
     }
 }
