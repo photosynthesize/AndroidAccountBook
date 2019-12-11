@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lay_stat_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/but_stat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/back" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_stat_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/but_stat_daily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/today" />
+
+        <Button
+            android:id="@+id/but_stat_weekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/this_week" />
+
+        <Button
+            android:id="@+id/but_stat_monthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/this_month" />
+
+        <Button
+            android:id="@+id/but_stat_annual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/this_year" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_stat_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tex_stat_income"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_income" />
+
+        <TextView
+            android:id="@+id/tex_stat_spending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_expenditure" />
+
+        <TextView
+            android:id="@+id/tex_stat_surplus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/surplus" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Account Book</string>
+    <string name="but_quit">退出</string>
+    <string name="but_addItem">记账</string>
+    <string name="but_view">账目流水</string>
+    <string name="but_stat">统计</string>
+    <string name="but_health">健康助手</string>
+    <string name="tag">标签：</string>
+    <string name="select_tag">选择标签</string>
+    <string name="add_tag">添加标签</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="detail">账目详情</string>
+    <string name="money">金额</string>
+    <string name="back">退回主菜单</string>
+    <string name="date">日期</string>
+    <string name="db_name">testDB</string>
+    <string name="add_tag_hint">输入标签名称</string>
+    <string name="add_new_tag">新建标签</string>
+    <string name="fold_calender">收起日历</string>
+    <string name="unfold_calender">展开日历</string>
+    <string name="today">今天</string>
+    <string name="this_week">本周</string>
+    <string name="this_month">本月</string>
+    <string name="this_year">今年</string>
+    <string name="total_income">总收入：</string>
+    <string name="total_expenditure">总支出：</string>
+    <string name="surplus">盈余：</string>
+</resources>
