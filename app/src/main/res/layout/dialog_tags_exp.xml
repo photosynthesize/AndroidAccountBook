@@ -18,11 +18,11 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/but_tag_addTag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text=" " />
+            android:text="@string/add_new_tag" />
 
         <EditText
             android:id="@+id/edi_tag_tagName"
@@ -44,33 +44,7 @@
             android:id="@+id/lay_tag_selection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="交通" />
-
-            <Button
-                android:id="@+id/but_tags_food"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="食物" />
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="学费" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="书" />
-
-        </LinearLayout>
+            android:orientation="vertical" />
     </ScrollView>
 
     <TextView

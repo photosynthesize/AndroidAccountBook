@@ -1,6 +1,5 @@
 package com.example.accountbook;
 
-import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -10,11 +9,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.accountbook.db.DBHelper;
+
 public class MainActivity extends AppCompatActivity {
     private Button write;
     private Button list;
     private Button stat;
     private Button health;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void createDB() {
-        String sql = "CREATE TABLE IF NOT EXISTS account (" +
+        /*String sql = "CREATE TABLE IF NOT EXISTS account (" +
                 "id INTEGER primary key, " +
                 "type INTEGER not null," +
                 "tag text not null," +
@@ -44,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
                 ");";
         int mode = Context.MODE_PRIVATE;
         SQLiteDatabase db = this.openOrCreateDatabase(getString(R.string.db_name), mode, null);
-        db.execSQL(sql);
+        db.execSQL(sql);*/
+        DBHelper dbHelper = new DBHelper(this);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db.close();
     }
 
     class WriteListener implements View.OnClickListener {

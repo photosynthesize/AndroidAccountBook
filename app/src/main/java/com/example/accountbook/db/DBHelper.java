@@ -8,8 +8,8 @@ import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
     private static final String databaseName = "testDB";
-    private static final int TYPE_EXP = 1;
-    private static final int TYPE_INCOME = 2;
+    public static final int TYPE_EXP = 1;
+    public static final int TYPE_INCOME = 2;
 
     /**
      * Create a helper object to create, open, and/or manage a database.
