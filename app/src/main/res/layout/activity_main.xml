@@ -55,10 +55,10 @@
                 android:text="@string/but_stat" />
 
             <Button
-                android:id="@+id/but_main_health"
+                android:id="@+id/but_main_file"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/but_health" />
+                android:text="@string/but_file" />
         </LinearLayout>
 
     </LinearLayout>

@@ -9,16 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.accountbook.StatActivity"></activity>
-        <activity android:name="com.example.accountbook.ListActivity" />
-        <activity android:name="com.example.accountbook.WriteActivity" />
-        <activity android:name="com.example.accountbook.MainActivity">
+        <activity android:name=".FileActivity"></activity>
+        <activity android:name=".StatActivity" />
+        <activity android:name=".ListActivity" />
+        <activity android:name=".WriteActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>

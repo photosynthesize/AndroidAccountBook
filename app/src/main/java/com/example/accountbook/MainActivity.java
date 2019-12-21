@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button write;
     private Button list;
     private Button stat;
-    private Button health;
+    private Button file;
 
 
     @Override
@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
         write = (Button) findViewById(R.id.but_main_write);
         list = (Button) findViewById(R.id.but_main_list);
         stat = (Button) findViewById(R.id.but_main_stat);
-        health = (Button) findViewById(R.id.but_main_health);
+        file = (Button) findViewById(R.id.but_main_file);
 
         write.setOnClickListener(new WriteListener());
         list.setOnClickListener(new ListListener());
         stat.setOnClickListener(new StatListener());
-        health.setOnClickListener(new HealthListener());
+        file.setOnClickListener(new FileListener());
 
         createDB();
     }
@@ -50,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
         DBHelper dbHelper = new DBHelper(this);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         db.close();
+    }
+
+    class FileListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            Intent intentToWrite = new Intent(MainActivity.this, FileActivity.class);
+            startActivity(intentToWrite);
+        }
     }
 
     class WriteListener implements View.OnClickListener {

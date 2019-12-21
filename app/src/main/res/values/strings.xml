@@ -26,4 +26,9 @@
     <string name="total_income">总收入：</string>
     <string name="total_expenditure">总支出：</string>
     <string name="surplus">盈余：</string>
+    <string name="path">文件名:</string>
+    <string name="import_export_hint">请输入要导入或导出的文件的文件名。</string>
+    <string name="import_">导入账本</string>
+    <string name="export_">导出账本</string>
+    <string name="but_file">导入/导出账本</string>
 </resources>

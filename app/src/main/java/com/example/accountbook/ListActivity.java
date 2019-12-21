@@ -23,6 +23,7 @@ public class ListActivity extends AppCompatActivity {
     private TextView textTest;
     private SQLiteDatabase db;
     private boolean folded = false;
+    private String[] types = {"未知", "支出", "收入"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,7 @@ public class ListActivity extends AppCompatActivity {
             date = cursor.getString(cursor.getColumnIndex("date"));
             detail = cursor.getString(cursor.getColumnIndex("detail"));
             amount = cursor.getDouble(cursor.getColumnIndex("amount"));
-            line = line + String.format("账目类别：%d\n标签：%s\n日期：%s\n金额：%.2f\n详情：%s\n\n", type, tag, date, amount, detail);
+            line = line + String.format("账目类别：%d\n标签：%s\n日期：%s\n金额：%.2f\n详情：%s\n\n", types[type], tag, date, amount, detail);
             cursor.moveToNext();
         }
         cursor.close();
@@ -89,7 +90,7 @@ public class ListActivity extends AppCompatActivity {
             date = cursor.getString(cursor.getColumnIndex("date"));
             detail = cursor.getString(cursor.getColumnIndex("detail"));
             amount = cursor.getDouble(cursor.getColumnIndex("amount"));
-            line = line + String.format("账目类别：%d\n标签：%s\n日期：%s\n金额：%.2f\n详情：%s\n\n", type, tag, date, amount, detail);
+            line = line + String.format("账目类别：%s\n标签：%s\n日期：%s\n金额：%.2f\n详情：%s\n\n", types[type], tag, date, amount, detail);
             cursor.moveToNext();
         }
         cursor.close();
